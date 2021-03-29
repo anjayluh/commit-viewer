@@ -1,11 +1,12 @@
 import './App.css';
-import {BrowserRouter as Router, Route} from 'react-router-dom'
-import Note from "./modules/note/Note"
+import Layout from "./components/Layout"
 const App: React.FC = () => {
   return (
-    <Router>
-      <Route exact={true} path="/" component={Note} />
-    </Router>
+    <Layout>
+      <Router>
+        <Route exact={true} path="/" component={Note} />
+      </Router>
+    </Layout>
   );
 }
 
