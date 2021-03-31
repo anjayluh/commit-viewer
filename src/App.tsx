@@ -1,13 +1,13 @@
-import './App.css';
-import Layout from "./components/Layout"
+import React from 'react';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import ContentSwitch from "./components/ContentSwitch"
+
 const App: React.FC = () => {
-  return (
-    <Layout>
+    return (
       <Router>
-        <Route exact={true} path="/" component={Note} />
+        <ContentSwitch />
       </Router>
-    </Layout>
-  );
+    );
 }
 
 export default App;
