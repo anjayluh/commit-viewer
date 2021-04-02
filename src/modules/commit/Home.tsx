@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { IState } from "../../data/types";
 import Chip from "../../components/styled-components/Chip";
 import Button from "../../components/styled-components/Button";
+import TextField from "../../components/styled-components/TextField";
 
 const Note = () => {
   const dispatch = useDispatch();
@@ -30,6 +31,7 @@ const Note = () => {
         <Button>
           Search commit
         </ Button>
+        <TextField placeHolder={'Eg. facebook/react'} type={'text'} />
     </div>
   );
 };
