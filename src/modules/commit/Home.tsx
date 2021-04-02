@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { IState } from "../../data/types";
 import Chip from "../../components/styled-components/Chip";
+import Button from "../../components/styled-components/Button";
 
 const Note = () => {
   const dispatch = useDispatch();
@@ -26,6 +27,9 @@ const Note = () => {
         <Chip>
           label
         </ Chip>
+        <Button>
+          Search commit
+        </ Button>
     </div>
   );
 };
