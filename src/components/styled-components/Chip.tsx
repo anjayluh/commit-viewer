@@ -7,12 +7,41 @@ interface Props {
 }
 
 const ChipStyled = styled.button`
-  background: #29335D;
-  border-radius: 4px;
-  border: none;
-  color: white;
-  min-width: 83px;
-  height: 21px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 8px 16px;
+    min-width: 140px;
+
+    position: static;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    /* Primary */
+
+    background: #29335C;
+    border-radius: 8px;
+    border: 0px;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 10px 0px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: -0.4px;
+
+    /* White */
+
+    color: #FFFFFF;
 `;
 
 const Chip = (props: Props) => (
