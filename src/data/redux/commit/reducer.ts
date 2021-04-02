@@ -1,26 +1,26 @@
-import {INote, INoteDetails} from "../../../modules/note/types";
+import {ICommit, ICommitDetails} from "../../../modules/commit/types";
 
-export interface INoteState {
+export interface ICommitState {
     loading: boolean
-    data: INote[]
-    noteDetails?:INoteDetails
+    data: ICommit[]
+    commitDetails?: ICommitDetails
 }
 
-const initialState: INoteState = {
+const initialState: ICommitState = {
     loading: false,
     data: [],
-    noteDetails: undefined,
+    commitDetails: undefined,
 }
 
 
-export const noteRequestConstants = {
+export const commitViewerRequestConstants = {
     RequestsFetchAll:"RequestsFetchAll"
 
 }
 
 export default function reducer(state = initialState, action: any) {
     switch (action.type) {
-        case noteRequestConstants.RequestsFetchAll: {
+        case commitViewerRequestConstants.RequestsFetchAll: {
             return {...state, loading: false, data: action.payload}
         }
 

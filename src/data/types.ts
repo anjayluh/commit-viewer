@@ -1,5 +1,5 @@
-import { INoteState } from "./redux/note/reducer";
+import { ICommitState } from "./redux/commit/reducer";
 
 export interface IState {
-  note: INoteState;
+  commit: ICommitState;
 }
