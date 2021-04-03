@@ -1,18 +1,16 @@
 import { ICommitState } from "../../data/redux/commit/reducer";
 export interface ICommit {
-  id: string;
+  id: String;
   createdAt: Date;
-  title: String;
-  avatar: String;
+  avatar: String | null;
   author: String;
   message: String;
 }
 
 export interface ICommitDetails {
-  id: string;
+  id: String;
   createdAt: Date;
-  title: String;
-  avatar: String;
+  avatar: String | null;
   author: String;
   message: String;
 }

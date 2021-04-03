@@ -6,8 +6,8 @@ interface Props {
     handleClick?: () => any;
 }
 
-const ChipStyled = styled.button`
-    display: flex;
+const ChipStyled = styled.div`
+    display: inline-block;
     flex-direction: row;
     align-items: flex-start;
     padding: 8px 16px;
@@ -50,4 +50,4 @@ const Chip = (props: Props) => (
     </ChipStyled>
 );
 
-export default ChipStyled;
+export default Chip;

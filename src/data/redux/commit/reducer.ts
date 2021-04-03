@@ -3,13 +3,19 @@ import {ICommit, ICommitDetails} from "../../../modules/commit/types";
 export interface ICommitState {
     loading: boolean
     data: ICommit[]
-    commitDetails?: ICommitDetails
+    commitDetails: ICommitDetails
 }
 
 const initialState: ICommitState = {
     loading: false,
     data: [],
-    commitDetails: undefined,
+    commitDetails: {
+    id: '1',
+    createdAt: new Date(),
+    avatar: null,
+    author: 'gaearon',
+    message: 'Log all errors to console.error by default (#21130'
+    },
 }
 
 

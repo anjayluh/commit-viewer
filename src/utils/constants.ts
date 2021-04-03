@@ -1,4 +1,5 @@
 
 export const localRoutes = {
-  notes: "/",
+  home: "/",
+  details: '/:id'
 };

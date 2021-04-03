@@ -1,32 +1,36 @@
 import classes from '*.module.css';
-import * as React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import 'font-awesome/css/font-awesome.min.css';
 
 interface Props {
     placeHolder?: string;
     handleEnter?: () => any;
     type: string;
+    iconClass?: string;
+    containerStyles: any;
 }
 const TextFieldStyled = styled.input.attrs(props => ({
   type: props.type,
   placeholder: props.placeholder
 }))`
-    position: absolute;
     width: 694px;
     height: 58px;
-    left: 240px;
-    top: 474px;
 
     /* Neutral */
 
     background: #DFE4EA;
     border-radius: 8px;
-    border: 0px;
-    ::placeholder {
+    border-width: 0px;
+    &:focus, &:hover {
+      border-width: 2px;
+      border-color: #29335C;
+    }
+    ::placeholder, ::value {
         position: absolute;
         width: 171px;
         height: 28px;
-        left: 45.63px;
+        left: 50px;
         top: calc(50% - 28px/2);
 
         font-family: Inter;
@@ -43,8 +47,25 @@ const TextFieldStyled = styled.input.attrs(props => ({
         color: #B1B5C5;
   }
 `;
-const TextField = (props: Props) => (
-    <TextFieldStyled onClick={props.handleEnter} type={'text'} placeholder={props.placeHolder} />
-);
+
+const IconStyled = styled.i.attrs(props => ({
+  className: props.className,
+}))`
+  position: absolute;
+  font-size: 21px;
+  top: 18px;
+  left: 13px;
+  `
+
+const TextField = (props: Props) => {
+  const [inputValue, setInputValue] = useState('');
+
+  return (
+    <span style={props.containerStyles}>
+      <IconStyled className={props.iconClass} />
+      <TextFieldStyled onClick={props.handleEnter} type={'text'} placeholder={props.placeHolder}
+    value={inputValue} onChange={(event) => { setInputValue(event.target.value);}} />
+    </span>
+)};
 
 export default TextField;

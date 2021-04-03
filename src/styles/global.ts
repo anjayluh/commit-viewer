@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import BackgroundImage from '../assets/background.jpg';
  
 export default createGlobalStyle`
   * {
@@ -15,5 +14,10 @@ export default createGlobalStyle`
  
   html {
     background-color: #FFFFFF;    
+  }
+  @media (max-width: 916px): {
+    header{
+      display: none,
+    }
   }
 `;
