@@ -1,5 +1,6 @@
-import { ICommitState } from "./redux/commit/reducer";
+import { IRepositoryState } from "./redux/repository/reducer";
 
 export interface IState {
-  commit: ICommitState;
+  repository: IRepositoryState;
+  searchParam: String;
 }
