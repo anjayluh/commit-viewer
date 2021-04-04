@@ -4,14 +4,15 @@ import Logo from "./Logo";
 
 interface Props {
     children: any;
+    customStyles?: any;
 }
 
 const styles = {
     container: {
         display: 'flex',
         width: '100%',
-        margin: '51px auto',
-        padding: '0 150px',
+        margin: '0px',
+        padding: '44px 150px 30px 150px',
         '@media (max-width: 4000px)': {
             display: 'none',
         },
@@ -35,7 +36,7 @@ const Header = (props: Props) => {
   });
 
   return (
-    <header style={styles.container}>
+    <header style={{...styles.container, ...props.customStyles}}>
         <div style={styles.left}>
             <Logo />
         </div>

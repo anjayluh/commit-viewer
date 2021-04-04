@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import UnorderedList from "./styled-components/UnorderedList";
 
 
-const Header = () => {
+const Navigation = () => {
     const navItems: any[] = ['About', 'Contact'];
 
     return (
@@ -10,5 +10,5 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navigation;
 

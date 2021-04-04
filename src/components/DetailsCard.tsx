@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Paragraph from "./styled-components/Paragraph";
 import Avatar from "./styled-components/Avatar";
 
@@ -6,19 +6,19 @@ interface Props {
     handleClick?: () => any;
     author: String;
     description: String;
+    avatar?: string;
 }
 
 const styles = {
     container: {
         display: 'flex',
-        width: '600px',
-        margin: '0 auto',
+        width: '75%',
+        margin: '0 auto 25px',
     },
     left: {
-        marginRight: 'auto'
+        marginRight: '46px'
     },
     right: {
-        marginLeft: 'auto'
     },
     author: {
         fontSize: '22px',
@@ -37,7 +37,7 @@ const DetailsCard = (props: Props) => {
   return (
     <div onClick={props.handleClick} style={styles.container}>
         <div style={styles.left}>
-            <Avatar />
+            <Avatar avatar={props.avatar} />
             <Paragraph className={`normal dark semi-bold`} customStyle={styles.author}>
                 {props.author}
             </Paragraph>
