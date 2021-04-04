@@ -1,11 +1,13 @@
 import classes from '*.module.css';
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from "react-redux";
 import styled from 'styled-components';
 import 'font-awesome/css/font-awesome.min.css';
+import { RepositoryRequestConstants} from "../../data/redux/repository/reducer";
 
 interface Props {
     placeHolder?: string;
-    handleEnter?: () => any;
+    handleEnter?: (item: any) => any;
     type: string;
     iconClass?: string;
     containerStyles: any;
@@ -16,7 +18,8 @@ const TextFieldStyled = styled.input.attrs(props => ({
 }))`
     width: 694px;
     height: 58px;
-
+    top: -22px;
+    position: relative;
     /* Neutral */
 
     background: #DFE4EA;
@@ -30,7 +33,6 @@ const TextFieldStyled = styled.input.attrs(props => ({
         position: absolute;
         width: 171px;
         height: 28px;
-        left: 50px;
         top: calc(50% - 28px/2);
 
         font-family: Inter;
@@ -44,27 +46,37 @@ const TextFieldStyled = styled.input.attrs(props => ({
 
         /* Placeholder primary */
 
-        color: #B1B5C5;
+        color: red;
   }
 `;
 
 const IconStyled = styled.i.attrs(props => ({
   className: props.className,
 }))`
-  position: absolute;
+  position: relative;
   font-size: 21px;
-  top: 18px;
+  top: calc(50% - 28px/2);
   left: 13px;
+  z-index: 1;
   `
 
 const TextField = (props: Props) => {
   const [inputValue, setInputValue] = useState('');
+  const dispatch = useDispatch();
+
+  const handleChange = (event: any) => {
+    setInputValue(event.target.value);
+    dispatch({
+      type: RepositoryRequestConstants.SearchRepositories,
+      payload: event.target.value,
+    });
+  };
 
   return (
     <span style={props.containerStyles}>
       <IconStyled className={props.iconClass} />
       <TextFieldStyled onClick={props.handleEnter} type={'text'} placeholder={props.placeHolder}
-    value={inputValue} onChange={(event) => { setInputValue(event.target.value);}} />
+    value={inputValue} onChange={handleChange} />
     </span>
 )};
 

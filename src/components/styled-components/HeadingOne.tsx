@@ -7,7 +7,6 @@ interface Props {
 }
 
 const HeadingOneStyled = styled.h1`
-    position: absolute;
     height: 160px;
     left: 430px;
     right: 430px;
@@ -28,6 +27,8 @@ const HeadingOneStyled = styled.h1`
     /* Dark */
 
     color: #18214D;
+    width: 540px;
+    margin: 0px auto;
 `;
 const HeadingOne = (props: Props) => (
     <HeadingOneStyled>

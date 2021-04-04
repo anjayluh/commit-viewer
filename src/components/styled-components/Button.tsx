@@ -4,17 +4,12 @@ import styled from 'styled-components';
 
 interface Props {
     children: any;
-    handleClick?: () => any;
+    handleClick?: (item: any) => any;
+    params: any;
 }
 
 const ButtonStyled = styled.button`
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-
     /* Secondary */
-
     background: #F3663F;
     border-radius: 8px;
     border: 0px;
@@ -38,12 +33,17 @@ const ButtonContent = styled.span`
 
     color: #FFFFFF;
 `;
-const Button = (props: Props) => (
-    <ButtonStyled onClick={props.handleClick}>
-        <ButtonContent>
-            {props.children}
-        </ButtonContent>
-    </ButtonStyled>
-);
+const Button = (props: Props) => {
+    const handleClick = () => {
+        props.handleClick && props.handleClick(props.params);
+    }
+    return(
+        <ButtonStyled onClick={handleClick}>
+            <ButtonContent>
+                {props.children}
+            </ButtonContent>
+        </ButtonStyled>
+    )
+};
 
 export default Button;

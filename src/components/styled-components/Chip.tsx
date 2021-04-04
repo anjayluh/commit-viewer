@@ -3,7 +3,9 @@ import styled from 'styled-components';
 
 interface Props {
     children: any;
-    handleClick?: () => any;
+    handleClick?: (item: any) => any;
+    customStyle?: any;
+    item?: any;
 }
 
 const ChipStyled = styled.div`
@@ -12,12 +14,7 @@ const ChipStyled = styled.div`
     align-items: flex-start;
     padding: 8px 16px;
     min-width: 140px;
-
-    position: static;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
+    margin: 10px 0px;
 
     /* Primary */
 
@@ -30,7 +27,6 @@ const ChipStyled = styled.div`
     flex: none;
     order: 0;
     flex-grow: 0;
-    margin: 10px 0px;
     font-family: Inter;
     font-style: normal;
     font-weight: 600;
@@ -44,10 +40,15 @@ const ChipStyled = styled.div`
     color: #FFFFFF;
 `;
 
-const Chip = (props: Props) => (
-    <ChipStyled onClick={props.handleClick}>
+const Chip = (props: Props) => {
+    const handleClick = () => {
+        props.item && props.handleClick && props.handleClick(props.item)
+    }
+    return (
+    <ChipStyled onClick={handleClick} style={props.customStyle}>
         {props.children}
     </ChipStyled>
-);
+)
+};
 
 export default Chip;
