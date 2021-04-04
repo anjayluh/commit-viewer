@@ -12,7 +12,7 @@ const styles = {
     }
 }
 
-const Header = () => {
+const Logo = () => {
 
   return (
     <div style={styles.left}>
@@ -23,4 +23,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Logo;
