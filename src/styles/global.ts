@@ -26,13 +26,13 @@ body, html {
       margin-right: auto!important;
     }
     .chip-container {
-      flex-direction: column
+      flex-direction: column;
+      margin-bottom: 38px;
     }
     .chip-container>div{
       width: fit-content;
       margin-right: auto!important;
       margin-left:  auto!important;
-      margin-bottom: 38px;
     }
     .search-container{
       flex-direction: column;
@@ -50,7 +50,15 @@ body, html {
       width: 100%!important;
       margin-top: 24px;
     }
-
+    main h1 {
+      margin-bottom: 24px;
+    display: inline-block;
+    }
+    main h1, main p.description{
+      width: unset!important;
+      padding-left: 32px;
+      padding-right: 32px;
+    }
   }
 }
 `;

@@ -128,7 +128,7 @@ const Home = () => {
         <HeadingOne>
           Discover the world of code
         </HeadingOne>
-        <Paragraph className={`normal dark`} customStyle={styles.description}>
+        <Paragraph className={`normal dark description`} customStyle={styles.description}>
           Explore open source projects from Github, and read their commit history to see the story of how they were built
         </Paragraph>
         <div style={styles.searchContainer} className={'search-container'}>
