@@ -21,29 +21,34 @@ const styles = {
   },
   description: {
     width: '440px',
-    margin: '17px auto 0px'
+    margin: '17px auto 0px',
+    textAlign: 'center',
+    letterSpacing: '-0.4px',
+    color: '#3E4462',
   },
   searchContainer: {
     display: 'flex',
-    width: '60%',
+    width: '70%',
     margin: '69px auto 24px',
+    justifyContent: 'center'
     
   },
   textField: {
-    width: 694,
+    width: '64%',
     height: 58,
-    left: 240,
-    top: 474
+    marginRight: '30.5px'
   },
   buttonContainer: {
-    marginLeft: '15px'
+    marginLeft: '30.5px'
   },
   alternativeText: {
     marginBottom: '24px'
   },
   footer: {
-    textAlign: "center" as "center",
-    margin: '0px auto'
+    display: 'flex',
+    justifyContent: 'center',
+    margin: '0px auto',
+    flexWrap: 'wrap' as 'wrap',
   },
   chip: {
     marginRight: '32px'
@@ -117,30 +122,30 @@ const Home = () => {
   return (
     <div>
       <Header>
-        <Navigation></Navigation>
+        <Navigation />
       </Header>
       <main style={styles.main}>
         <HeadingOne>
           Discover the world of code
         </HeadingOne>
         <Paragraph className={`normal dark`} customStyle={styles.description}>
-          Explore open source projects, and read their commit history to see how they were built
+          Explore open source projects from Github, and read their commit history to see the story of how they were built
         </Paragraph>
-        <div style={styles.searchContainer}>
+        <div style={styles.searchContainer} className={'search-container'}>
           <TextField placeHolder={'Eg. facebook/react'} type={'text'} iconClass={"fa fa-search icon"}
           containerStyles={styles.textField} />
-          <span style={styles.buttonContainer}>
+          <div style={styles.buttonContainer} className={'button-container'}>
             <Button handleClick={filter} params={searchParam}>
               See commits 🚀
             </Button>
-          </span>
+          </div>
         </div>
         { data.length > 0 &&
           <Paragraph className={`normal dark small`} customStyle={styles.alternativeText}>
             Or pick one of these suggested repos
           </Paragraph>
         }
-        <div style={styles.footer}>
+        <div style={styles.footer} className={'chip-container'}>
           {data.map((item, index) => (
             // Display first 4 items
             index < 5 && <Chip key={index} customStyle={styles.chip} handleClick={selectChip} item={item}>

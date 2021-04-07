@@ -1,22 +1,28 @@
 import React from "react";
 import Paragraph from "./styled-components/Paragraph";
 import Avatar from "./styled-components/Avatar";
+import {printStdDatetime} from "../utils/dateHelpers";
 
 interface Props {
     handleClick?: () => any;
     author: String;
     description: String;
     avatar?: string;
+    createdAt: Date;
 }
 
 const styles = {
     container: {
         display: 'flex',
-        width: '75%',
+        width: '70%',
         margin: '0 auto 25px',
     },
     left: {
         marginRight: '46px'
+    },
+    center: {
+        marginLeft: 'auto',
+        marginRight: 'auto',
     },
     right: {
     },
@@ -45,6 +51,12 @@ const DetailsCard = (props: Props) => {
         <div style={styles.right}>
             <Paragraph className={`normal dark`} customStyle={styles.description}>
                 {props.description}
+            </Paragraph>
+        </div>
+
+        <div style={styles.right}>
+            <Paragraph className={`normal dark`} customStyle={styles.description}>
+                {printStdDatetime(new Date())}
             </Paragraph>
         </div>
     </div>

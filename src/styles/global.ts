@@ -1,23 +1,56 @@
 import { createGlobalStyle } from 'styled-components';
  
 export default createGlobalStyle`
-  * {
+body, html {
     margin: 0;
     padding: 0;
-    outline: 0;
-    box-sizing: border-box;
-  }
- 
-  #root {
-    margin: 0 auto;
-  }
- 
-  html {
-    background-color: #FFFFFF;    
-  }
-  @media (max-width: 916px): {
-    header{
-      display: none,
+    width: 100%;
+    height: 100%;
+}
+  @media screen and (max-width: 765px) {
+    div#root>div>header{
+      display: block!important;
+      padding: 22px 131px 16px;
     }
+    ul {
+      display: inline-flex;
+      padding-top: 0px;
+      padding-inline-start: 0px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5px;
+      width: 180px;
+    }
+    header>div>div>p {
+      margin-left: auto!important;
+      margin-right: auto!important;
+    }
+    .chip-container {
+      flex-direction: column
+    }
+    .chip-container>div{
+      width: fit-content;
+      margin-right: auto!important;
+      margin-left:  auto!important;
+      margin-bottom: 38px;
+    }
+    .search-container{
+      flex-direction: column;
+      margin: 64px auto 24px!important;
+    }
+    .search-container>div{
+      width: 100%!important;
+      margin-right: unset!important;
+      margin-left: unset!important;
+    }
+    .search-container>div>input{
+      padding-left: unset!important;
+    }
+    .search-container>div>button{
+      width: 100%!important;
+      margin-top: 24px;
+    }
+
   }
+}
 `;

@@ -14,6 +14,7 @@ const UnorderedListStyled = styled.ul`
     &{
         display: flex;
         list-style: none;
+        margin: 0px;
     }
     & li{
         position: static;
@@ -21,7 +22,6 @@ const UnorderedListStyled = styled.ul`
         height: 28px;
         left: 0px;
         top: 0px;
-
         font-family: Inter;
         font-style: normal;
         font-weight: normal;
@@ -36,7 +36,7 @@ const UnorderedListStyled = styled.ul`
         flex: none;
         order: 0;
         flex-grow: 0;
-        margin: 0px 64px;
+        margin: 0px 31px;
         padding-top: 3px;
     }
 `;

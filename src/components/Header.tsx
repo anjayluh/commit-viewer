@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Paragraph from "./styled-components/Paragraph";
 import Logo from "./Logo";
-
 interface Props {
     children: any;
     customStyles?: any;
@@ -10,12 +9,8 @@ interface Props {
 const styles = {
     container: {
         display: 'flex',
-        width: '100%',
         margin: '0px',
-        padding: '44px 150px 30px 150px',
-        '@media (max-width: 4000px)': {
-            display: 'none',
-        },
+        padding: '44px 150px 30px 150px'
     },
     left: {
         marginRight: 'auto'
@@ -40,9 +35,9 @@ const Header = (props: Props) => {
         <div style={styles.left}>
             <Logo />
         </div>
-        <span style={styles.right}>
+        <div style={styles.right}>
             {props.children}
-        </span>
+        </div>
     </header>
   );
 };
