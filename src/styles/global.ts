@@ -27,7 +27,7 @@ body, html {
     }
     .chip-container {
       flex-direction: column;
-      margin-bottom: 38px;
+      margin-bottom: 40px;
     }
     .chip-container>div{
       width: fit-content;
@@ -53,6 +53,10 @@ body, html {
     main h1 {
       margin-bottom: 24px;
     display: inline-block;
+    font-size: 56px;
+    line-height: 62px;
+    text-align: center;
+    letter-spacing: -2.4px;
     }
     main h1, main p.description{
       width: unset!important;
