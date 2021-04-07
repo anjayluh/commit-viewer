@@ -179,7 +179,9 @@ const RepositoryDetails = () => {
           }
           {!searchLoading && repositoryDetails && commits &&(
             commits?.map((item, index) => (
-            item.author && <DetailsCard key={index} avatar={item.author.avatar_url} author={item.author.login} description={item.commit.message} />
+            item.author && index < 10 && 
+            <DetailsCard key={index} avatar={item.author.avatar_url} author={item.author.login} description={item.commit.message}
+            createdAt={item.commit.author.date} />
             ))
             )
           }
