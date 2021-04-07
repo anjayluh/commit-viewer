@@ -30,8 +30,7 @@ const styles = {
     display: 'flex',
     width: '70%',
     margin: '69px auto 24px',
-    justifyContent: 'center'
-    
+    justifyContent: 'center'    
   },
   textField: {
     width: '64%',

@@ -4,6 +4,7 @@ import Logo from "./Logo";
 interface Props {
     children: any;
     customStyles?: any;
+    customClass?: string;
 }
 
 const styles = {
@@ -31,11 +32,11 @@ const Header = (props: Props) => {
   });
 
   return (
-    <header style={{...styles.container, ...props.customStyles}}>
-        <div style={styles.left}>
+    <header style={{...styles.container, ...props.customStyles}} className={props.customClass}>
+        <div style={styles.left} className={'left'}>
             <Logo />
         </div>
-        <div style={styles.right}>
+        <div style={styles.right} className={'right'}>
             {props.children}
         </div>
     </header>

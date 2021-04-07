@@ -21,27 +21,28 @@ const styles = {
   },
   searchContainer: {
     display: 'flex',
-    width: '60%',
-    marginTop: '-10px'
-    
+    justifyContent: 'center'    
   },
   textField: {
-    width: 694,
+    width: '64%',
     height: 58,
-    left: 240,
-    top: 474
+    marginRight: '30.5px'
   },
   buttonContainer: {
-    marginLeft: '15px'
+    marginLeft: '30.5px'
   },
   header: {
     height: '130px',
-    backgroundColor: '#EFF2F6'
+    backgroundColor: '#EFF2F6',
+    padding: '34px 150px 34px'
   },
   searchText: {
       fontSize: '28px',
       lineHeight: '34px',
       margin: '25px 0px 20px 0px'
+  },
+  loader: {
+    margin: '33px 0px 35px'
   }
 }
 
@@ -160,8 +161,8 @@ const RepositoryDetails = () => {
   return (
     <div>
       <main>
-          <Header customStyles={styles.header}>
-            <div style={styles.searchContainer}>
+          <Header customStyles={styles.header} customClass={`details-header`}>
+            <div style={styles.searchContainer} className={'search-container'}>
               <TextField placeHolder={placeHolder} type={'text'} iconClass={"fa fa-search icon"}
               containerStyles={styles.textField} />
               <span style={styles.buttonContainer}>
@@ -174,10 +175,10 @@ const RepositoryDetails = () => {
           <Paragraph className={`normal dark extra-bold`} customStyle={styles.searchText} >
             {searchParam}
           </Paragraph>
-          {searchLoading &&
-            <Loader />
-          }
-          {!searchLoading && repositoryDetails && commits &&(
+          {/* {searchLoading && */}
+            <Loader customStyles={styles.loader} />
+          {/* } */}
+          {/* {!searchLoading && repositoryDetails && commits &&(
             commits?.map((item, index) => (
             item.author && index < 10 && 
             <DetailsCard key={index} avatar={item.author.avatar_url} author={item.author.login} description={item.commit.message}
@@ -187,7 +188,7 @@ const RepositoryDetails = () => {
           }
           {!searchLoading && !repositoryDetails &&
             <NoData />
-          }
+          } */}
         </main>
     </div>
   );
