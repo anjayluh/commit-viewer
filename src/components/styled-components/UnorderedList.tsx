@@ -5,11 +5,6 @@ interface Props {
     listItems: any[];
     customStyle?: any;
 }
-const Container = styled.div`
-  width: 400px;
-  margin: 30px auto;
-`;
-
 const UnorderedListStyled = styled.ul`
     &{
         display: flex;

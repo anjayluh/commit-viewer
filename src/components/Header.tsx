@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Paragraph from "./styled-components/Paragraph";
 import Logo from "./Logo";
 interface Props {
     children: any;
