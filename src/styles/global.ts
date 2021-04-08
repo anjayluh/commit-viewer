@@ -20,7 +20,7 @@ header.details-header .left p {
 }
   @media screen and (max-width: 765px) {
     header.details-header{
-      padding: 25px 110px!important;
+      padding: 25px 20%!important;
       height: unset!important;
     }
     header.details-header .left {
@@ -32,7 +32,7 @@ header.details-header .left p {
     }
     div#root>div>header {
       display: block!important;
-      padding: 23px 130px 0px!important;
+      padding: 23px 20% 0px!important;
     }
     header.details-header .left p {
       margin-top: unset;
@@ -139,6 +139,7 @@ header.details-header .left p {
     }
     .details-card-container .avatar-container {
       width: 26px;
+      min-width: 26px;
       height: 26px;
       border-radius: 50%;
       margin: 0px 15px 0px 0px!important;
