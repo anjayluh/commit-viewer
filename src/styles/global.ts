@@ -41,17 +41,9 @@ header.details-header .left p {
     }
     header.details-header .left p {
       margin-top: unset;
-  }
+    }
     main {
       margin-bottom: unset!important;
-    }
-    main h1 {
-      font-size: 56px!important;
-      line-height: 62px!important;
-      letter-spacing: -2.4px!important;
-      height: unset!important;
-      margin: 22px auto 25px!important;
-      letter-spacing: -2.4px!important;
     }
     ul {
       padding-top: 0px;
@@ -100,12 +92,13 @@ header.details-header .left p {
       width: 90%!important;
     }
     main h1 {
-      margin-bottom: 24px;
       display: inline-block;
       font-size: 56px;
       line-height: 62px;
-      text-align: center;
-      letter-spacing: -2.4px;
+      text-align: center;;
+      letter-spacing: -2.4px!important;
+      height: unset!important;
+      margin: 22px auto 25px!important;
     }
     main h1, main p.description {
       width: unset!important;
