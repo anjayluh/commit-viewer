@@ -175,10 +175,10 @@ const RepositoryDetails = () => {
           <Paragraph className={`normal dark extra-bold`} customStyle={styles.searchText} >
             {searchParam}
           </Paragraph>
-          {/* {searchLoading && */}
+          {searchLoading &&
             <Loader customStyles={styles.loader} />
-          {/* } */}
-          {/* {!searchLoading && repositoryDetails && commits &&(
+          }
+          {!searchLoading && repositoryDetails && commits &&(
             commits?.map((item, index) => (
             item.author && index < 10 && 
             <DetailsCard key={index} avatar={item.author.avatar_url} author={item.author.login} description={item.commit.message}
@@ -187,8 +187,8 @@ const RepositoryDetails = () => {
             )
           }
           {!searchLoading && !repositoryDetails &&
-            <NoData />
-          } */}
+            <NoData text={'No data found'} />
+          }
         </main>
     </div>
   );

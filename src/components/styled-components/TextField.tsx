@@ -33,7 +33,6 @@ const TextFieldStyled = styled.input.attrs(props => ({
     line-height: 28px;
     letter-spacing: -0.5px;
     &:focus, &:hover {
-      border-width: 2px;
       border-color: #29335C;
     }
     &::placeholder {

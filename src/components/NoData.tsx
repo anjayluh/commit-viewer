@@ -1,14 +1,19 @@
 import React, { useState } from "react";
 import Paragraph from "./styled-components/Paragraph";
 
-const NoData = () => {
+
+interface Props {
+  text: string;
+}
+
+const NoData = (props: Props) => {
 
   return (
     <div>
         <Paragraph className={`normal dark`} customStyle={{
         textAlign: 'center',
         letterSpacing: '-0.4px'}}>
-          No data found
+          {props.text}
         </Paragraph>
     </div>
   );

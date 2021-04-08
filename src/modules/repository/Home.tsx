@@ -130,7 +130,7 @@ const Home = () => {
         <Paragraph className={`normal dark description`} customStyle={styles.description}>
           Explore open source projects from Github, and read their commit history to see the story of how they were built
         </Paragraph>
-        <div style={styles.searchContainer} className={'search-container'}>
+        <div style={styles.searchContainer} className={'home-search search-container'}>
           <TextField placeHolder={'Eg. facebook/react'} type={'text'} iconClass={"fa fa-search icon"}
           containerStyles={styles.textField} />
           <div style={styles.buttonContainer} className={'button-container'}>

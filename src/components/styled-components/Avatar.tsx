@@ -23,7 +23,7 @@ const AvatarStyled = styled.div`
 `;
 
 const Avatar = (props: Props) => (
-    <AvatarStyled onClick={props.handleClick}>
+    <AvatarStyled onClick={props.handleClick} className={'avatar-container'}>
         {props.avatar &&
         <picture>
             <img src={props.avatar} alt={"Avatar"} />

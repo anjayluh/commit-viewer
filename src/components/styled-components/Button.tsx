@@ -15,6 +15,9 @@ const ButtonStyled = styled.button`
     border: 0px;
     width: 210px;
     height: 58px;
+    &:focus{
+        outline:0
+    }
 `;
 const ButtonContent = styled.span`
     /* Buttons / Large */

@@ -14,17 +14,18 @@ interface Props {
 const styles = {
     container: {
         display: 'flex',
-        width: '70%',
+        justifyContent: 'space-between',
         margin: '0 auto 25px',
+        padding: '35px 150px',
     },
     left: {
-        marginRight: '46px'
+        flex: '1 0'
     },
     center: {
-        marginLeft: 'auto',
-        marginRight: 'auto',
+        flex: '3 0'
     },
     right: {
+        flex: '1 0'
     },
     author: {
         fontSize: '22px',
@@ -34,27 +35,28 @@ const styles = {
         marginTop: '4px'
     },
     description: {
-        marginTop: '29px'
+        marginTop: '29px',
+        textAlign: 'start'
     }
 }
 
 const DetailsCard = (props: Props) => {
 
   return (
-    <div onClick={props.handleClick} style={styles.container}>
-        <div style={styles.left}>
+    <div onClick={props.handleClick} style={styles.container} className={'details-card-container'}>
+        <div style={styles.left} className={'left'}>
             <Avatar avatar={props.avatar} />
-            <Paragraph className={`normal dark semi-bold`} customStyle={styles.author}>
+            <Paragraph className={`normal dark semi-bold author`} customStyle={styles.author}>
                 {props.author}
             </Paragraph>
         </div>
-        <div style={styles.right}>
+        <div style={styles.center} className={'center'}>
             <Paragraph className={`normal dark`} customStyle={styles.description}>
                 {props.description}
             </Paragraph>
         </div>
 
-        <div style={styles.right}>
+        <div style={styles.right} className={'right'}>
             <Paragraph className={`normal dark`} customStyle={styles.description}>
                 {printStdDatetime(new Date())}
             </Paragraph>
