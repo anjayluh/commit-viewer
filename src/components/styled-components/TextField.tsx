@@ -46,7 +46,7 @@ const IconStyled = styled.i.attrs(props => ({
 }))`
   position: relative;
   font-size: 18px;
-  top: calc(50% - 23px/2);
+  top: calc(50% - 22px/2);
   left: 19px;
   z-index: 1;
   `
