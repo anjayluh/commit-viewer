@@ -34,6 +34,11 @@ header.details-header .left p {
       display: block!important;
       padding: 23px 20% 0px!important;
     }
+    div#root>div>header .right {
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
     header.details-header .left p {
       margin-top: unset;
   }
