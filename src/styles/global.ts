@@ -147,5 +147,24 @@ header.details-header .left p {
       display: block;
     }
   }
+  @media screen and (max-width: 420px) {
+    main h1 {
+      font-size: 35px!important;
+      line-height: 35px!important;
+      margin: 25px auto 25px!important;
+    }
+    .search-container>div>button {
+      height: 43px!important;
+    }
+    .search-container>div>input {
+      height: 43px!important;
+    }
+    main p.description {
+      margin: 0px auto 0px!important;
+    }
+    .search-container {
+      margin: 24px auto 24px!important;
+    }
+  }
 }
 `;
